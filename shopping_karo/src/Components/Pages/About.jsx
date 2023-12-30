@@ -5,8 +5,6 @@ const About = () => {
   return (
     <section className="about-page">
       <AboutComponent />
-    {/* <Calculator /> */}
-
     </section>
   )
 }

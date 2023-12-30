@@ -16,7 +16,7 @@ const Products = () => {
     <ProductHeader product={filter_products} />
 
       {
-        filter_products?.length === 0 ? (<Shimmer />) : (<div className="products d-flex flex-wrap gap-4 justify-content-center mt-5">{
+        filter_products?.length === 0 ? (<Shimmer />) : (<div className="products d-flex flex-wrap justify-content-center">{
             filter_products.map(product => {
               return <Link to={'/product/' + product?.id} key={product?.id} className='p-link'><ProductCard product={product} keyw={product?.id} /></Link>
             })

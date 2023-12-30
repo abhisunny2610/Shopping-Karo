@@ -51,11 +51,11 @@ const HomeBody = () => {
 
             <div className="carousel mt-3">
                 <button className='btn btn-sm rounded-circle' onClick={handleDecrease}><i className='fa-solid fa-arrow-left'></i></button>
-                <img src={imageList[imageIndex]} alt="image" className='mx-4' />
+                <img src={imageList[imageIndex]} alt="image"/>
                 <button className='btn btn-sm rounded-circle' onClick={handleIncrease}><i className='fa-solid fa-arrow-right'></i></button>
             </div>
             {
-                products?.length === 0 ? (<Shimmer />) : (<div className="products d-flex flex-wrap gap-4 justify-content-center mt-5">
+                products?.length === 0 ? (<Shimmer />) : (<div className="products d-flex flex-wrap justify-content-center">
                     {
                         products.slice(36, 64).map(product => {
                             return <Link to={'product/' + product?.id} key={product.id} className='p-link'><ProductCard product={product} key={product?.id} /></Link>

@@ -50,7 +50,7 @@ section {
 }
 
 .header {
-    background-color: yellow;
+    background-color: var(--white);
     width: 100%;
     /* height: fit-content; */
     height: 3.5rem;
@@ -209,7 +209,7 @@ section {
         }
     }
 
-    
+
 }
 
 .coupon {
@@ -266,7 +266,7 @@ section {
     font-size: 20px;
 }
 
-.product-card .price span{
+.product-card .price span {
     font-size: var(--fs-16);
 }
 
@@ -276,9 +276,75 @@ section {
 
 
 
+
+
 /* -------------product card style finish---------*/
 
-@media (max-width: 768px){
+
+/* -------------footer style start---------*/
+
+.footer {
+    background-color: var(--white);
+    text-align: center;
+    padding: 15px 0px;
+    margin-bottom: 0px;
+    font-family: var(--opensans-font);
+    letter-spacing: 1.5px;
+    cursor: context-menu;
+    border-top: 1px solid var(--black);
+    font-size: var(--fs-14);
+}
+
+.footer span,
+a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+
+    >.k {
+        color: var(--orange);
+    }
+}
+
+/* -------------footer style finish---------*/
+
+/* -------------about component style start---------*/
+
+.about-component {
+    font-family: var(--opensans-font);
+    /* height: 100vh; */
+
+    >.heading {
+
+        >h1 {
+            font-size: 50px;
+            font-weight: bolder;
+            color: var(--black);
+        }
+
+        >.shop {
+            background-color: var(--blue);
+            color: var(--gray);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        >h4 {
+
+            color: var(--black);
+
+            >span {
+                color: var(--orange);
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+/* -------------about component style finish---------*/
+
+/* @media (max-width: 768px){
     .coupon {
         >p {
             font-size: var(--fs-14);
@@ -363,29 +429,227 @@ section {
         font-size: var(--fs-16);
     }
 
-}
+} */
 
 
-@media (max-width: 500px){
+@media screen and (min-width: 320px) and (max-width: 450px) {
+
+    section {
+        padding: 2.5rem 10px;
+    }
+
+    .header {
+        background-color: var(--white);
+        width: 100%;
+        /* height: fit-content; */
+        height: 3rem;
+        padding: 1px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 999;
+    
+        >.name {
+            >h3 {
+                font-family: var(--kalina-font);
+                font-weight: 600;
+                letter-spacing: 2px;
+                font-size: var(--fs-16);
+    
+                >span {
+                    color: var(--orange);
+                }
+            }
+        }
+    
+        >.links {
+            >ul {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding-top: 10px;
+    
+                >a {
+                    text-decoration: none;
+                    color: var(--black);
+                    font-family: var(--opensans-font);
+                    font-size: 16px;
+                    position: relative;
+    
+                    >span {
+                        background-color: var(--orange);
+                        border-radius: 50px;
+                        position: absolute;
+                        top: -8px;
+                        left: 10px;
+                    }
+                }
+    
+                >a:active {
+                    color: var(--orange);
+                }
+            }
+        }
+    }
+
+    .coupon {
+        >p {
+            font-size: var(--fs-8);
+            font-weight: 400;
+
+            >.details {
+                font-size: 6px;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .carousel img {
+        width: 80%;
+        height: 100px;
+        transition: all 0.5s ease-in;
+        overflow-x: scroll;
+    }
+
+    .products {
+        margin-top: 20px;
+        gap: .5rem;
+    }
+
     .product-card {
-        width: 160px;
+        width: 150px;
     }
-    
+
     .product-card img {
-        width: 159px;
-        height: 180px;
+        width: 149px;
+        height: 140px;
     }
-    
+
     .product-card .description {
         font-size: var(--fs-12);
-        padding: 0px 10px;
-        letter-spacing: 0.5px;
+        padding: 0px 8px;
     }
-    
+
     .product-card .price {
-        padding: 0px 10px;
-        font-size: var(--fs-16);
+        padding: 0px 8px;
+        font-size: var(--fs-14);
     }
+
+    .product-card .price span {
+        font-size: var(--fs-12);
+    }
+
+    .footer {
+        font-size: var(--fs-10);
+    }
+
+    .about-component {
+        flex-direction: column;
+        margin-top: 20px;
+        >.heading {
+
+            >h1 {
+                font-size: 30px;
+                font-weight: bolder;
+                color: var(--black);
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            >.shop {
+                background-color: var(--blue);
+                color: var(--gray);
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            >h4 {
+                font-size: var(--fs-18);
+                color: var(--black);
+
+                >span {
+                    color: var(--orange);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        >.image {
+            >img {
+                width: 250px;
+            }
+        }
+
+    }
+
+    .cart-section .heading {
+        >h3 {
+            font-size: var(--fs-16);
+            
+        }
+
+        >h6 {
+            /* font-size: var(--fs-14); */
+            display: none;
+        }
+    }
+
+    .cart-item{
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .cart-item .col-3{
+        width: 100%;
+
+        > img{
+            width: 100%;
+            height: 200px;
+        }
+    }
+
+    .cart-item .col-6{
+        margin: 10px 0px;
+        width: 100%;
+        position: relative;
+
+        > h3{
+            font-size: 18px;
+        }
+
+        > h4{
+            position: absolute;
+            right: 10px;
+            top: 1px;
+        }
+    }
+
+    .cart-item .details .buttons{
+        flex-direction: row;
+    }
+
+    .cart-section .subtotal {
+        >h3 {
+            margin-top: 30px;
+            font-size: var(--fs-16);
+        }
+    }
+
+    .cart-section .buttons {
+        flex-direction: column;
+        gap: .5rem;
+
+        >.btn {
+            font-size: var(--fs-14);
+        }
+    }
+
+    .cart-section h1 {
+        font-size: 22px;
+    }
+
 }
 
 
@@ -395,33 +659,6 @@ section {
 
 
 
-/* -------------footer style start---------*/
-
-.footer {
-    background-color: var(--white);
-    text-align: center;
-    padding: 15px 0px;
-    margin-bottom: 0px;
-    font-family: var(--opensans-font);
-    letter-spacing: 1.5px;
-    cursor: context-menu;
-    border-top: 1px solid var(--black);
-    font-size: var(--fs-14);
-
-    >span,
-    a {
-        text-decoration: none;
-        color: var(--black);
-        font-weight: 600;
-
-        >.k {
-            color: var(--orange);
-        }
-    }
-
-}
-
-/* -------------footer style finish---------*/
 
 
 /* -------------shimmer style start---------*/
@@ -557,42 +794,3 @@ section {
 }
 
 /* -------------single product style finish---------*/
-
-
-/* -------------about component style start---------*/
-
-.about-component {
-    font-family: var(--opensans-font);
-    height: 70vh;
-
-    >.heading {
-
-        >h1 {
-            font-size: 50px;
-            font-weight: bolder;
-            color: var(--black);
-        }
-
-        >.shop {
-            background-color: var(--blue);
-            color: var(--gray);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        >h4 {
-
-            color: var(--black);
-
-            >span {
-                color: var(--orange);
-                font-weight: bold;
-            }
-        }
-    }
-
-}
-
-/* -------------about component style finish---------*/
-
-

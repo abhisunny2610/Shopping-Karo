@@ -19,7 +19,7 @@ const Cart = () => {
   console.log(cart)
 
   return (
-    <section className='cart-section-lg'>
+    <section className='cart-section'>
       <div className='shadow p-5 mt-4'>
         <div className="heading d-flex align-items-end justify-content-between">
           <h3>Shopping Cart</h3>
@@ -34,7 +34,7 @@ const Cart = () => {
                   <div className='col-3'>
                     <img src={cartItem?.image} alt={cartItem.id} width="120px" />
                   </div>
-                  <div className="deatils mx-4 col-6">
+                  <div className="details mx-4 col-6">
                     <h3 className='title'>{cartItem?.title}</h3>
                     <div className="quantity">
                       <QuantityToggle quantity={cartItem.quantity} setDecrease={setDecrease} setIncrease={setIncrease} />
@@ -48,8 +48,8 @@ const Cart = () => {
                   </div>
                   <h4 className='col-2 text-end'>₹ {cartItem?.price}</h4>
                 </div>
-              }) 
-            ): <h1>Your Shoppping Cart is Empty.</h1>
+              })
+            ) : <h1>Your Shoppping Cart is Empty.</h1>
           }
 
         </div>
