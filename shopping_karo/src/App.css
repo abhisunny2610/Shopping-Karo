@@ -50,7 +50,7 @@ section {
 }
 
 .header {
-    background-color: var(--white);
+    background-color: yellow;
     width: 100%;
     /* height: fit-content; */
     height: 3.5rem;
