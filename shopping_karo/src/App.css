@@ -344,6 +344,91 @@ a {
 
 /* -------------about component style finish---------*/
 
+
+/* -------------single product style start---------*/
+
+.product-details {
+
+    height: fit-content;
+    font-family: var(--opensans-font);
+
+    >.images {
+
+        >img {
+            width: 400px;
+            height: 400px;
+        }
+
+    }
+
+    >.details {
+
+
+
+        padding: 0px 10px;
+
+        >p {
+            letter-spacing: 0.5px;
+        }
+
+        >.brand {
+            color: var(--blue);
+        }
+
+        >.description {
+            font-size: var(--fs-14);
+        }
+
+        >.sale {
+            font-size: 12px;
+            /* color: var(--blue); */
+
+        }
+
+        >.on-delivery {
+            font-size: var(--fs-16);
+            color: var(--blue);
+        }
+    }
+
+    >.side-bar {
+
+        >p {
+            font-size: var(--fs-14);
+        }
+
+        >.location {
+            color: var(--orange);
+        }
+
+
+
+        >a {
+
+            >button {
+                width: 100%;
+                border-radius: 50px;
+                margin-top: 5px;
+                outline: none;
+                border: none;
+                height: 2rem;
+                font-size: var(--fs-14);
+            }
+
+            >.cart-button {
+                background-color: rgb(241, 213, 30);
+            }
+
+            >.buy-button {
+                background-color: var(--orange);
+            }
+        }
+    }
+
+}
+
+/* -------------single product style finish---------*/
+
 /* @media (max-width: 768px){
     .coupon {
         >p {
@@ -449,34 +534,34 @@ a {
         justify-content: space-between;
         position: fixed;
         z-index: 999;
-    
+
         >.name {
             >h3 {
                 font-family: var(--kalina-font);
                 font-weight: 600;
                 letter-spacing: 2px;
                 font-size: var(--fs-16);
-    
+
                 >span {
                     color: var(--orange);
                 }
             }
         }
-    
+
         >.links {
             >ul {
-                display: flex;
+                display: none;
                 align-items: center;
                 gap: 20px;
                 padding-top: 10px;
-    
+
                 >a {
                     text-decoration: none;
                     color: var(--black);
                     font-family: var(--opensans-font);
                     font-size: 16px;
                     position: relative;
-    
+
                     >span {
                         background-color: var(--orange);
                         border-radius: 50px;
@@ -485,7 +570,7 @@ a {
                         left: 10px;
                     }
                 }
-    
+
                 >a:active {
                     color: var(--orange);
                 }
@@ -547,6 +632,7 @@ a {
     .about-component {
         flex-direction: column;
         margin-top: 20px;
+
         >.heading {
 
             >h1 {
@@ -586,7 +672,7 @@ a {
     .cart-section .heading {
         >h3 {
             font-size: var(--fs-16);
-            
+
         }
 
         >h6 {
@@ -595,38 +681,43 @@ a {
         }
     }
 
-    .cart-item{
+    .cart-item {
         display: flex;
         flex-direction: column;
         padding: 0px;
+
     }
 
-    .cart-item .col-3{
+    .cart-item .col-3 {
         width: 100%;
 
-        > img{
+        >img {
             width: 100%;
             height: 200px;
         }
     }
 
-    .cart-item .col-6{
-        margin: 10px 0px;
+    .cart-item .col-6 {
+        display: block;
+        margin: 0px 0px;
         width: 100%;
         position: relative;
 
-        > h3{
+        >h3 {
             font-size: 18px;
         }
 
-        > h4{
-            position: absolute;
-            right: 10px;
-            top: 1px;
-        }
     }
 
-    .cart-item .details .buttons{
+    .cart-item .details {
+        /* margin: 0px; */
+        margin-top: 10px;
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    .cart-item .details .buttons {
         flex-direction: row;
     }
 
@@ -648,6 +739,65 @@ a {
 
     .cart-section h1 {
         font-size: 22px;
+    }
+
+    .product-details {
+        height: fit-content;
+        flex-direction: column;
+
+        >.images {
+            width: 100vw;
+        }
+
+        >.details {
+            width: 100vw;
+            padding: 0px 8px;
+            margin-top: 0px;
+        }
+
+        >.side-bar {
+            width: 100vw;
+
+            >a {
+
+                >button {
+                    width: 100%;
+                    border-radius: 50px;
+                    margin-top: 5px;
+                    outline: none;
+                    border: none;
+                    height: 3rem;
+                    font-size: var(--fs-14);
+                }
+
+                >.cart-button {
+                    background-color: rgb(241, 213, 30);
+                }
+
+                >.buy-button {
+                    background-color: var(--orange);
+                }
+            }
+        }
+
+    }
+
+    .image-container{
+
+        > .image{
+            margin-bottom: 10px;
+            > img{
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+        > .images{
+            > img {
+                width: 80px;
+                height: 80px;
+            }
+        }
     }
 
 }
@@ -710,87 +860,3 @@ a {
 }
 
 /* -------------shimmer style finish---------*/
-
-/* -------------single product style start---------*/
-
-.product-details {
-
-    height: fit-content;
-    font-family: var(--opensans-font);
-
-    >.images {
-
-        >img {
-            width: 400px;
-            height: 400px;
-        }
-
-    }
-
-    >.details {
-
-
-
-        padding: 0px 10px;
-
-        >p {
-            letter-spacing: 0.5px;
-        }
-
-        >.brand {
-            color: var(--blue);
-        }
-
-        >.description {
-            font-size: var(--fs-14);
-        }
-
-        >.sale {
-            font-size: 12px;
-            /* color: var(--blue); */
-
-        }
-
-        >.on-delivery {
-            font-size: var(--fs-16);
-            color: var(--blue);
-        }
-    }
-
-    >.side-bar {
-
-        >p {
-            font-size: var(--fs-14);
-        }
-
-        >.location {
-            color: var(--orange);
-        }
-
-
-
-        >a {
-
-            >button {
-                width: 100%;
-                border-radius: 50px;
-                margin-top: 5px;
-                outline: none;
-                border: none;
-                height: 2rem;
-                font-size: var(--fs-14);
-            }
-
-            >.cart-button {
-                background-color: rgb(241, 213, 30);
-            }
-
-            >.buy-button {
-                background-color: var(--orange);
-            }
-        }
-    }
-
-}
-
-/* -------------single product style finish---------*/
