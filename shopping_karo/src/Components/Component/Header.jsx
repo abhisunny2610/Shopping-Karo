@@ -21,10 +21,10 @@ const Header = () => {
       </div>
       <div className="links">
         <ul className={`navbar-links ${isNavOpen ? 'open' : ''}`}>
-          <NavLink to='/' >Home</NavLink>
-          <NavLink to='/products'>Products</NavLink>
-          <NavLink to='/about'>About</NavLink>
-          <NavLink to='/cart'><i className="fa-solid fa-cart-shopping"></i><span className='badge badge-light text-black'>{total_items}</span></NavLink>
+          <NavLink to='/'  activeclassname="active">Home</NavLink>
+          <NavLink to='/products'  activeclassname="active">Products</NavLink>
+          <NavLink to='/about'  activeclassname="active">About</NavLink>
+          <NavLink to='/cart'  activeclassname="active"><i className="fa-solid fa-cart-shopping"></i><span className='badge badge-light text-black'>{total_items}</span></NavLink>
         </ul>
       </div>
       {/* <div className="user">

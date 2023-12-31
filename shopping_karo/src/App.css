@@ -96,10 +96,6 @@ section {
                     left: 10px;
                 }
             }
-
-            >a:active {
-                color: var(--orange);
-            }
         }
     }
 
@@ -351,6 +347,10 @@ a {
 
 /* -------------single product style start---------*/
 
+.active {
+    color: var(--orange);
+}
+
 .product-details {
 
     height: fit-content;
@@ -444,7 +444,7 @@ a {
             font-weight: 500;
 
             >.details {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     }
@@ -587,11 +587,21 @@ a {
 
 @media screen and (min-width: 451px) and (max-width: 665px){
 
+    .product-header {
+        padding: 8px 8px;
+        font-size: var(--fs-12);
+    }
+    .product-header .list{
+        display: none;
+    }
+
     .carousel img {
-        width: 84%;
+        width: 100%;
         height: 150px;
-        transition: all 0.5s ease-in;
-        overflow-x: scroll;
+    }
+
+    .carousel button{
+        display: none;
     }
 
     .products {
@@ -729,59 +739,34 @@ a {
 @media screen and (min-width: 320px) and (max-width: 450px) {
 
     section {
-        padding: 2.5rem 10px;
+        padding: 3rem 10px;
+    }
+
+
+    .product-header {
+        padding: 8px 8px;
+        font-size: var(--fs-12);
+    }
+
+
+
+    .product-header .list{
+        display: none;
     }
 
     .header {
-        background-color: var(--white);
-        width: 100%;
-        /* height: fit-content; */
-        height: 3rem;
-        padding: 1px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: fixed;
-        z-index: 999;
+        padding: 10px 20px;
 
         >.name {
             >h3 {
-                font-family: var(--kalina-font);
-                font-weight: 600;
-                letter-spacing: 2px;
                 font-size: var(--fs-16);
-
-                >span {
-                    color: var(--orange);
-                }
             }
         }
 
         >.links {
             >ul {
-                display: none;
-                align-items: center;
-                gap: 20px;
-                padding-top: 10px;
-
                 >a {
-                    text-decoration: none;
-                    color: var(--black);
-                    font-family: var(--opensans-font);
-                    font-size: 16px;
-                    position: relative;
-
-                    >span {
-                        background-color: var(--orange);
-                        border-radius: 50px;
-                        position: absolute;
-                        top: -8px;
-                        left: 10px;
-                    }
-                }
-
-                >a:active {
-                    color: var(--orange);
+                    font-size: var(--fs-14);
                 }
             }
         }
@@ -789,21 +774,22 @@ a {
 
     .coupon {
         >p {
-            font-size: var(--fs-8);
+            font-size: var(--fs-12);
             font-weight: 400;
 
             >.details {
-                font-size: 6px;
+                font-size: 8px;
                 margin-left: 5px;
             }
         }
     }
 
     .carousel img {
-        width: 80%;
+        width: 100%;
         height: 100px;
-        transition: all 0.5s ease-in;
-        overflow-x: scroll;
+    }
+    .carousel button{
+        display: none;
     }
 
     .products {
