@@ -1,5 +1,5 @@
 import React from 'react'
-import ShortProducts from './ShortProducts'
+import ShortProducts, { SortByCatergory } from './ShortProducts'
 
 const ProductHeader = ({product}) => {
 
@@ -8,6 +8,7 @@ const ProductHeader = ({product}) => {
         <div className='list'>PRODUCT LIST</div>
         <div className='available'>{product.length} PRODUCTS AVAILABLE</div>
         <ShortProducts />
+        <SortByCatergory />
     </div>
   )
 }

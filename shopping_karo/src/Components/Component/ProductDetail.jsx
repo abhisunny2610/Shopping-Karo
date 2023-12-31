@@ -26,7 +26,7 @@ const ProductDetail = () => {
   const mrp = price * 15 + discountPercentage * 10
 
   return (
-    <div className="product-details gap-4 mt-4 row d-flex">
+    <div className="product-details mt-4 row d-flex">
       <div className="images col-4">
         <Image img={images} />
       </div>

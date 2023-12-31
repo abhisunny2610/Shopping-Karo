@@ -87,6 +87,7 @@ section {
                 font-family: var(--opensans-font);
                 font-size: 16px;
                 position: relative;
+                font-weight: 500;
 
                 >span {
                     background-color: var(--orange);
@@ -230,7 +231,7 @@ section {
 
 
 .carousel img {
-    width: 90%;
+    width: 94%;
     height: 360px;
     transition: all 0.5s ease-in;
     overflow-x: scroll;
@@ -240,6 +241,7 @@ section {
 
 .products{
     gap: 1rem;
+    margin-top: 20px;
 }
 
 .product-card {
@@ -351,8 +353,13 @@ a {
     color: var(--orange);
 }
 
-.product-details {
+.image-container .image img{
+    width: 400px;
+    margin-bottom: 20px;
+}
 
+.product-details {
+    gap: 3rem;
     height: fit-content;
     font-family: var(--opensans-font);
 

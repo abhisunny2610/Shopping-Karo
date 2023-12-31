@@ -10,9 +10,7 @@ const Initialstate= {
     filter_products : [],
     all_products: [],
     sorting_value: "lowest",
-    // filter: { 
-    //     value
-    // }
+    category_value: "all"
 }
 
 const FilterProvider = ({ children }) => {
@@ -25,9 +23,14 @@ const FilterProvider = ({ children }) => {
         dispatch({type: "SORTING"})
     }
 
+    const updateFilterValue = (event) => {
+        return dispatch({type: "UPDATE_FILTERS_VALUE"})
+    }
+
     useEffect(()=> {
         dispatch({type: "SORTING_PRODUCTS", payload:products})
-    }, [state.sorting_value])
+        dispatch({type: "FILTER_PRODUCTS", payload:products});
+    }, [state.sorting_value, state.category_value, products])
 
 
     useEffect(()=> {
@@ -35,7 +38,7 @@ const FilterProvider = ({ children }) => {
     }, [products])
 
     return (
-        <FilterContext.Provider value={{ ...state, sorting }}>{children}</FilterContext.Provider>
+        <FilterContext.Provider value={{ ...state, sorting , updateFilterValue}}>{children}</FilterContext.Provider>
     )
 
 }
